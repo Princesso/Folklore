@@ -1,0 +1,16 @@
+.header {
+  background-color: #222;
+  height: 50px;
+  padding: 20px;
+  color: white;
+}
+
+li {
+  font-size: 1.5em;
+  display: inline;
+  margin: 2%;
+}
+
+.App-intro {
+  font-size: large;
+}
