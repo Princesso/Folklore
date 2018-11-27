@@ -14,10 +14,17 @@ const StyledCardList = styled.div`
 const CardList = ({users}) => {
   /**
    * A map function returns each object in the array and optionally an index
+   * Every Array should have a key property in React
    */
   const cardContainer = users.map((user,index) => {
-    return <Card id={users[index].id} name={users[index].name} username={users[index].username} email={users[index].email}/> 
+    return <Card 
+              id={users[index].id} 
+              name={users[index].name} 
+              username={users[index].username} 
+              email={users[index].email}
+            /> 
   })
+  
   return(
     <StyledCardList>
       {cardContainer}
