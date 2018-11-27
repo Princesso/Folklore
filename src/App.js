@@ -6,11 +6,11 @@ import styled from 'styled-components'
 
 const StyledApp=styled.div`
   display : flex;
+  justify-content: center;
   .card-container{
     display: flex;
     allign-items: center;
     flex-wrap: wrap;
-    margin: 2px 10px;
   }
 
 `
