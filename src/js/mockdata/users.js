@@ -22,5 +22,11 @@ export const users = [
     name: "Peculiar Ediomao",
     username: "pediomo",
     email: "pediomo@gmail.com"
-  }
+  },
+  {
+    id: 5,
+    name: "Chimamanda Egbuna",
+    username: "amaegbu",
+    email: "manda@gmail.com"
+  },
 ]
