@@ -21,7 +21,7 @@ img{
 const Card = (props) => {
   return(
     <StyledCard>
-      <img src="https://robohash.org/princess" alt="Robot"/>
+      <img src={`https://robohash.org/${props.id}`} alt="Robot"/>
       <h3>{props.name}</h3>
       <p>{props.email}</p>
     </StyledCard>
