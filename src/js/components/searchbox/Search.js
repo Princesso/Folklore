@@ -22,7 +22,7 @@ const Search = ({searchChange}) => {
     <StyledSearch>
       <input 
       type="search" 
-      placeholder="Robot Name" 
+      placeholder="Friend's Name" 
       className="search-box"
       onChange = {searchChange}
       />
