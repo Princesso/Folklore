@@ -8,14 +8,24 @@ const StyledSearch = styled.div`
   padding: 2px;
 
   .search-box {
-    background: blue;
+    background:#b5b5ca;
+    border-radius: 9px;
+    width: 20%;
+    height: 35px;
+    padding: 1%;
+    font-size: 1em
   }
 `
 
 const Search = ({searchChange}) => {
   return (
     <StyledSearch>
-      <input type="search" placeholder="Robot Name" className="search-box"/>
+      <input 
+      type="search" 
+      placeholder="Robot Name" 
+      className="search-box"
+      onChange = {searchChange}
+      />
     </StyledSearch>
   )
 }
