@@ -8,12 +8,12 @@ const StyledSearch = styled.div`
   padding: 2px;
 
   .search-box {
-    background:#b5b5ca;
+    background:#a682ff;
     border-radius: 9px;
     width: 20%;
     height: 35px;
     padding: 1%;
-    font-size: 1em
+    font-size: 1em;
   }
 `
 
