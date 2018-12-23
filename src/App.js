@@ -18,8 +18,12 @@ class App extends Component {
     }
   }
 
-  onSearchChange (event){
-    console.log(event)
+  onSearchChange = (event) => {
+    this.setState({searchlist: event.target.value}) 
+    const filteredRobots = this.state.users.filter(user => {
+      return user.name.toLowerCase().includes(this.state.searchlist.toLowerCase())
+    })
+    console.log(filteredRobots)
   }
   render() {
     return (
