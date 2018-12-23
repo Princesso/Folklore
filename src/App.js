@@ -14,9 +14,13 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      users: users,
+      users: [],
       searchlist: ''
     }
+  }
+
+  componentDidMount() {
+    this.setState({users: users})
   }
 
   onSearchChange = (event) => {
