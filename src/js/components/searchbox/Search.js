@@ -10,7 +10,7 @@ const StyledSearch = styled.div`
   .search-box {
     background:#a682ff;
     border-radius: 9px;
-    width: 20%;
+    width: 300px;
     height: 35px;
     padding: 1%;
     font-size: 1em;
