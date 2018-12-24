@@ -12,9 +12,13 @@ const StyledHeader = styled.div `
         color: aquamarine ;
         font-size: 3em;
     }
+
+    @media only screen and (max-width: 768px) {
+      margin-bottom: 15%;
+    }
 `
 
-const Header =() =>{
+const Header = () => {
     return(
         <StyledHeader>
             <h2>Friends Zone</h2>
