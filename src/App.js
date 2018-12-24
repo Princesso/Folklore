@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import CardList from './js/components/card/CardList'
 import Header from './js/components/header'
-import {users} from '../src/js/mockdata/users'
+//import {users} from '../src/js/mockdata/users'
 import styled from 'styled-components'
 import SearchButton from '../src/js/components/searchbox'
 import stylesheet from './styles/index.css'
+import Scroll from './js/components/scroll'
 
 const StyledApp=styled.div`
 
@@ -27,6 +28,9 @@ class App extends Component {
     .then(res => { 
       this.setState({users: res})
     })
+    .catch(error => {
+      throw(error)
+    })
   }
 
   onSearchChange = (event) => {
@@ -36,13 +40,21 @@ class App extends Component {
     const filteredRobots = this.state.users.filter(user => {
       return user.name.toLowerCase().includes(this.state.searchlist.toLowerCase())
     })
-    return (
-      <StyledApp>   
-        <Header/>    
-        <SearchButton searchChange = {this.onSearchChange}/>
-        <CardList users={filteredRobots}/>        
-    </StyledApp>
-    );
+
+    if (this.state.users.length === 0) {
+      return <h2>Loading</h2>
+    } else {
+        return (
+          <StyledApp>   
+            <Header/>    
+            <SearchButton searchChange = {this.onSearchChange}/>
+            <Scroll>
+              <CardList users={filteredRobots}/> 
+            </Scroll>
+                   
+        </StyledApp>
+        );
+    }
   }
 }
 
