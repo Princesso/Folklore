@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import SearchButton from '../src/js/components/searchbox'
 import stylesheet from './styles/index.css'
 import Scroll from './js/components/scroll'
+import ErrorBoundary from './js/components/error'
 
 const StyledApp=styled.div`
 
@@ -49,7 +50,9 @@ class App extends Component {
             <Header/>    
             <SearchButton searchChange = {this.onSearchChange}/>
             <Scroll>
-              <CardList users={filteredRobots}/> 
+              <ErrorBoundary>
+                <CardList users={filteredRobots}/> 
+              </ErrorBoundary>
             </Scroll>
                    
         </StyledApp>
